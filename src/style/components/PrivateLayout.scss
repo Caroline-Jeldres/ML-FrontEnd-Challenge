@@ -1,0 +1,111 @@
+.layout {
+    .header {
+        height: 100px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        justify-content: center;
+        background-color: #fff159;
+        border: 0;
+        position: relative;
+        box-sizing: border-box;
+        .nav-logo {
+            background-repeat: no-repeat;
+            overflow: hidden;
+            text-indent: -999px;
+            background-image: url(https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.22.13/mercadolibre/logo__large_plus.png);
+            height: 34px;
+            width: 134px;
+            display: -webkit-flex;
+            display: flex;
+            position: static;
+            left: 0;
+            top: 0;
+
+        }
+        .nav-menu-item {
+            line-height: 18px;
+            font-size: 14px;
+            .nav-menu-cp {
+                height: 28px;
+                -webkit-flex-direction: column;
+                flex-direction: column;
+                -webkit-justify-content: space-between;
+                justify-content: space-between;
+                -webkit-align-items: flex-start;
+                align-items: flex-start;
+                .nav-menu-cp-send {
+                    position: static;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    top: 1px;
+                    font-size: 12px;
+                    color: rgba(0,0,0,.5);
+                    display: block;
+                    width: -webkit-fit-content;
+                    width: -moz-fit-content;
+                    width: fit-content;
+                    max-width: 140px;
+                    left: 0;
+                    padding: 0;
+                    margin: 0;
+                    line-height: 12px;
+                }
+                .nav-menu-link-cp {
+                    display: inline-block;
+                    overflow: hidden;
+                    width: -webkit-fit-content;
+                    width: -moz-fit-content;
+                    width: fit-content;
+                    max-width: 140px;
+                    margin: 0;
+                    color: #333;
+                    font-size: 14px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+        .div_first {
+            height: 40px;
+            .input_search {
+                .ant-input {
+                    max-width: 720px;
+                  }
+            }
+            img {
+                max-width: 340px;
+                max-height: 39px;
+            }
+        }
+        .div_second {
+            height: 28px;
+            .menu_top {
+                background: transparent;
+                height: 100%;
+                border-bottom: 0; 
+                .ant-menu-item {
+                    font-size: 14px;
+                    color: #333;
+                    &:hover {
+                        color: #000;
+                    }
+                    svg {
+                        font-size: 20px;
+                    }
+                }
+                .ant-menu-item::after {
+                    border-bottom: 0; 
+                }
+            }
+       
+        }
+     
+    
+ 
+    }
+    .site-layout-content {
+        height: calc($height - 182px);
+    }
+
+}
