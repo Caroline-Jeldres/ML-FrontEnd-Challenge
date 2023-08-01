@@ -1,0 +1,35 @@
+.pagination-container{
+    margin-top: 40px;
+    .pagination{
+        display: flex;
+        height: 53px;
+        align-items: center;
+        justify-content: center;
+        .ant-btn-link {
+            color: #3483fa;
+            height: 38px;
+            border-radius: 0;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.04);
+                color: #3483fa;
+            }
+        }
+        .page-number{
+            margin: 0 24px;
+            display: flex;
+            align-items: center;
+            .current {
+                padding: 9px 0 0;
+                background-color: rgba(0,0,0,.04);
+                color: rgba(0,0,0,.45);
+                font-weight: 600;
+                width: 36px;
+                height: 36px;
+                text-align: center;
+            }
+            span {
+                margin-left: 5px;
+            }
+        }
+    }
+}

@@ -14,7 +14,10 @@
 }
 //COMPONENTS
 @import "./components/PrivateLayout.scss";
-//MEDIAS
+@import "./pages/Home.scss";
+@import "./pages/ResultSearch.scss";
+@import "./components/Paginator.scss";
+//PAGES
 
 :root {
   * {

@@ -1,8 +1,10 @@
+import { RightOutlined } from '@ant-design/icons';
 import { Breadcrumb } from 'antd';
 
 const BreadcrumbPage = () => {
     return (
         <Breadcrumb
+        separator={<RightOutlined />}
         style={{
         margin: '16px 0',
         }}

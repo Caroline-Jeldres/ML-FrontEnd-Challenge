@@ -1,7 +1,6 @@
 import { Layout } from 'antd';
 import { Outlet } from 'react-router-dom';
-import BreadcrumbPage from './components/Breadcrum';
-import Header from './components/Header';
+import Header from './Header';
 
 const PrivateLayout = () => {
   const { Content, Footer } = Layout;
@@ -18,7 +17,6 @@ const PrivateLayout = () => {
           padding: '0 50px',
         }}
       >
-      <BreadcrumbPage />
         <div
           className="site-layout-content"
         >
