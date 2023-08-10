@@ -14,7 +14,7 @@ Idealmente la app deberá contar con :
 
 ## Dependencias
 
-En el presente repositorio se ha desarrollado en FrontEnd Web, utilizando React + Vite de acuerdo a las siguientes dependencias:
+En el presente repositorio se ha desarrollado para FrontEnd Web Desktop, utilizando React + Vite de acuerdo a las siguientes dependencias:
 
 - "react-js": "^18.2.0",
 - "react-image-magnify": "^2.7.4",
