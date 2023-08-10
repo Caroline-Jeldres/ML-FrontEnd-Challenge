@@ -28,7 +28,7 @@ const PrivateLayout = () => {
           textAlign: 'center',
         }}
       >
-        Ant Design ©2023 Created by Ant UED
+        ML Chanllenge ©2023 Created by Caroline Jeldres
       </Footer>
     </Layout>
   );

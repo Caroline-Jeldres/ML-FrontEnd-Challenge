@@ -1,7 +1,6 @@
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import PropTypes from "prop-types";
-import { useEffect } from "react";
 
 const Paginator = ({
   limit,
@@ -10,29 +9,35 @@ const Paginator = ({
   setCurrent,
   setFetchConfig,
   fetchConfig,
-  handleClickScroll
 }) => {
   const totalPages = Math.ceil(total / limit);
 
-  useEffect(() => {
-    setFetchConfig({
-      ...fetchConfig,
-      offset: current * limit,
-    });
-    handleClickScroll()
-  }, [current]);
-
   const previousPage = () => {
+    console.log("current", current);
     if (current !== 1) {
       setCurrent(current - 1);
+      setFetchConfig({
+        ...fetchConfig,
+        offset: current * limit,
+      });
+    }
+    if (current === 2) {
+      setCurrent(current - 1);
+      setFetchConfig({
+        ...fetchConfig,
+        offset: 0,
+      });
     }
   };
 
   const nextPage = () => {
     if (current !== totalPages) {
       setCurrent(current + 1);
+      setFetchConfig({
+        ...fetchConfig,
+        offset: current * limit,
+      });
     }
-   
   };
 
   return (
@@ -72,7 +77,7 @@ Paginator.propTypes = {
   setCurrent: PropTypes.func,
   setFetchConfig: PropTypes.func,
   fetchConfig: PropTypes.object,
-  handleClickScroll: PropTypes.func
+  handleClickScroll: PropTypes.func,
 };
 
 Paginator.defaultProps = {
@@ -82,7 +87,7 @@ Paginator.defaultProps = {
   setCurrent: () => {},
   setFetchConfig: () => {},
   fetchConfig: {},
-  handleClickScroll: () => {}
+  handleClickScroll: () => {},
 };
 
 export default Paginator;

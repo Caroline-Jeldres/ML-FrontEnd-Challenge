@@ -10,11 +10,12 @@
             flex: 0 0 320px !important;
             max-width: 320px !important;
             min-width: 320px !important;
+            padding-right: 55px;
+            word-break:break-all;
             .title_search {
                 text-transform: capitalize;
                 font-size: 26px;
                 margin-bottom: 2px;
-            
             }
             .subtitle_search {
                 color: #333;
@@ -22,18 +23,127 @@
                 font-weight: 300;
                 line-height: 1.29;
             }
+            .filters {
+                margin-top: 36px;
+            }
+            .switch_filter{
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                padding: 15px 12px 15px 16px;
+                margin: 8px 14px 8px 0;
+                .row_switch {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                
+                    .full {
+                        color: #00a650;
+                        font-size: 14px;
+                        font-weight: 600;
+                        font-style: italic;
+                        margin-right: 6px;
+                        img {
+                            width: 15px;
+                        }
+                    }
+                    .span {
+                        font-weight: 600;
+                     }
+                    p {
+                        font-size: 12px;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .ant-switch.ant-switch-small {
+                        min-width: 34px;
+                        height: 20px;
+                        line-height: 16px;
+                        margin-top: 8px;
+                        .ant-switch-handle {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                    .earth {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 18px;
+                        }
+                        span {
+                            font-size: 12px;
+                            font-style: italic;
+                            color: #1F4E96;
+                            font-weight: bold;
+                            
+                        }
+                      
+                    }
+                    .description {
+                        width: 158px;
+                    }
+                }
+            }
+             .filter_tag {
+                .list_tag {
+                    ul {
+                        list-style: none;
+                        padding-inline-start: 0;
+                        .title {
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 1.25;
+                            margin-bottom: 10px;
+                        }
+                        .item {
+                            margin-bottom: 6px;
+                            text-decoration: none;
+                            a {
+                                color: #666;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+             }   
+            
         }
         .ant-layout-content {
             .row_sorted {
                 display: flex;
-                align-items: flex-end;
                 justify-content: flex-end;
                 height: 40px;
-                flex-direction: column;
+                flex-direction: row;
+                align-content: flex-start;
+                flex-wrap: nowrap;
+                position: relative;
+                top: 15px;
+                align-items: baseline;
+                .col_sorted {
+                    .span {
+                        margin-right: 6px;
+                    }
+                }
+                .btn_dropdown{
+                    .icon_sort {
+                        transition: all 0.75s 0.25s;
+                    }
+                    .toggle-down {
+                        transform: rotate(0deg);
+                      }
+                      
+                      
+                      .toggle-up {
+                        transform: rotate(180deg);
+                      }
+                      
+                }
             }
             .content_list_products {
                 background: #fff;
                 margin-top: 30px;
+        
                 .col_product {
                     display: flex;
                     width: 100%;
@@ -60,24 +170,31 @@
                         }
                         .detail_product{
                             color: #333;
+                            font-size: 20px;
+                            font-weight: 300;
+                            line-height: 1.3;
+                            width: 100%;
+                         
                             .title {
                                 color: #333;
                                 font-size: 20px;
-                                font-weight: 300;
                                 line-height: 1.3;
                                 margin-bottom: 0;
+                                font-weight: 100;
                             }
                             .sub_title {
-                                color: #666;
+                                color: #666666cf;
                                 font-size: 12px;
                                 font-weight: 300;
                                 margin-top: 0;
                             }
                             .origin_price {
+                                margin-top: 10px;
                                 .ant-statistic-content {
                                     -webkit-font-smoothing: antialiased;
                                     font-size: 12px;
                                     text-decoration:line-through;
+                                    
                                     span {
                                         text-decoration:line-through;
                                         color: rgba(0,0,0,.55);
@@ -89,40 +206,57 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: flex-start;
-               
-                                .discount {
-                                    margin-left: 20px;
-
-                                    .ant-statistic-content {
-                                        -webkit-font-smoothing: antialiased;
-                                        font-size: 12px;
-                                        text-decoration:line-through;
-                                        span {
-                                            color: #00a650;
-                                            font-size: 14px;
-                                            font-weight: 400;
-                                            line-height: 1;
+                                .col_price {
+                                    display: flex;
+                                    align-items: center;
+                                    .price {
+                                        font-weight: 600;
+                                    }
+                                    .discount {
+                                        margin-left: 20px;
+    
+                                        .ant-statistic-content {
+                                            -webkit-font-smoothing: antialiased;
+                                            font-size: 12px;
+                                            
+                                            text-decoration:line-through;
+                                            span {
+                                                color: #00a650;
+                                                font-size: 14px;
+                                                font-weight: 600;
+                                                line-height: 1;
+                                            }
+                                           
                                         }
-                                       
+                                    }
+                                }               
+                               
+                                .col_rate {
+                                    text-align: start;
+                                    .ant-rate {
+                                        color: #3483fa;
+                                        font-size: 15px;
+                                        padding-top: 4px;
                                     }
                                 }
                             }
                             .row_installments {
                                 display: flex;
-                                align-items: center;
+                                align-items: baseline;
                                 top: -15px;
                                 position: relative;
+                                font-size: 14px;
                                 .installments {
                                     .ant-statistic-content {
                                         -webkit-font-smoothing: antialiased;
-                                        font-size: 12px;
+                                        font-size: 14px;
                                         text-decoration:line-through;
                                         margin: 0 5px;
 
                                         span {
                                             color: #00a650;
                                             font-size: 14px;
-                                            font-weight: 400;
+                                            font-weight: 600;
                                             line-height: 1;
                                         }
                                        
@@ -136,7 +270,7 @@
                                 flex-shrink: 0;
                                 color: #00a650;
                                 display: flex;
-                                align-items: center;
+                                align-items: baseline;
                                 .free {
                                     font-size: 14px;
                                     font-weight: 600;
@@ -146,6 +280,7 @@
                                 .full {
                                     font-size: 14px;
                                     font-weight: 600;
+                                    font-style: italic;
                                     img {
                                         width: 15px;
                                     }
@@ -162,9 +297,54 @@
                         color: #3483fa;
                         font-size: 22px;
                         padding: 35px 50px 0 0;
-                        &:hover {
-                            color: #1f4e96;
+                        .anticon-heart {
+                            &:hover {
+                                color: #1f4e96;
+                            }
                         }
+                 
+                    }
+                }
+            }
+            .init_search {
+                align-items: center;
+                border-radius: 4px;
+                flex-direction: row;
+                justify-content: center;
+                margin: 48px auto;
+                max-width: 1018px;
+                min-height: 204px;
+                padding: 42px 40px 32px;
+                background-color: #fff;
+                display: flex;
+                position: relative;
+                top: 30%;
+                .img_div {
+                    display: inline-block;
+                    margin-right: 35px;
+                    margin-top: -8px;
+                    vertical-align: middle;
+                }
+                .ui-search-rescue__title {
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 1.08;
+                    margin: 0;
+                }
+                .ui-search-rescue__list {
+                    font-size: 16px;
+                    font-weight: 300;
+                    margin: 18px 10px 10px 0;
+                    padding: 0;
+                    .ui-search-rescue__item {
+                        font-size: 16px;
+                        font-weight: 300;
+                        color: rgba(0,0,0,.9);
+                        line-height: 1.231;
+                        list-style-position: outside;
+                        list-style-type: disc;
+                        margin-bottom: 3px;
+                        margin-left: 18px;
                     }
                 }
             }
@@ -186,6 +366,25 @@
                 line-height: 15px;
                 margin-left: 9px;
             }
+        }
+    }
+}
+.sort_dropdown  {
+    font-size: 25px;
+    .ant-dropdown-menu {
+        padding: 0;
+        .ant-dropdown-menu-item {
+            height: 41px;
+            border-bottom: 1px solid #d8d8d8;
+            padding: 0 0 0 16px;
+        }
+        .ant-dropdown-menu-item-active {
+            border-left:5px solid #9cc4db;
+        }
+        .ant-dropdown-menu-item-selected {
+            border-left: 5px solid #3483fa;
+            font-weight: bold;
+            background: #fff;
         }
     }
 }

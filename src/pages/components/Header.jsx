@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Anchor, Col, Input, Menu, Row } from "antd";
+import { Anchor, Badge, Col, Input, Menu, Row } from "antd";
 import { DownOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -7,17 +7,16 @@ import locationSvg from "../../images/location.svg";
 import Header_api from "../../api/Header_api";
 
 const Header = () => {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const { Search } = Input;
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const onSearch = async (value) => {
-    navigate(`/listado.mercadolibre.cl/${value}`)
-
+    navigate(`/listado.mercadolibre.cl/${value}`);
   };
   const handleChange = (event) => {
     setMessage(event.target.value);
   };
-  console.log('message', message)
+  console.log("message", message);
 
   return (
     <Row className="row-header">
@@ -72,9 +71,13 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="" target="_blank" rel="noopener noreferrer">
-                Supermercado
-              </a>
+              <Badge
+                count="Nuevo"
+              >
+                <a href="" target="_blank" rel="noopener noreferrer">
+                  Supermercado
+                </a>
+              </Badge>
             </li>
             <li>
               <a href="" target="_blank" rel="noopener noreferrer">
